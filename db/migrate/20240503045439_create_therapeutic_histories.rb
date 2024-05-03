@@ -5,7 +5,7 @@ class CreateTherapeuticHistories < ActiveRecord::Migration[7.1]
       t.string :previous_diagnostic
       t.text :events_in_life
       t.text :previous_treatment
-      t.text :familiar_antecedent
+      t.text :familiar_antecedents
       t.references :patient, null: false, foreign_key: true
 
       t.timestamps
