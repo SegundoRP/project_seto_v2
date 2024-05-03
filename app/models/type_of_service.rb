@@ -1,0 +1,2 @@
+class TypeOfService < ApplicationRecord
+end
