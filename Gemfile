@@ -61,6 +61,7 @@ group :development, :test do
   gem "debug", platforms: %i[ mri windows ]
   gem "dotenv-rails"
   gem "letter_opener_web"
+  gem "rspec-rails"
 end
 
 group :development do
