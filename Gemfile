@@ -52,7 +52,7 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 6.1'
 gem 'simple_form', github: 'heartcombo/simple_form'
 gem 'bootstrap', '~> 5.2.3'
-gem 'view_component'
+# gem 'view_component'
 gem 'cloudinary'
 gem 'inline_svg'
 
@@ -60,7 +60,7 @@ group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ]
   gem "dotenv-rails"
-  gem "letter_opener_web"
+  # gem "letter_opener_web"
   gem "rspec-rails"
 end
 
