@@ -3,7 +3,7 @@ class DoctorsController < ApplicationController
 
   def index
     @doctors = Doctor.all
-    # debugger
+
     flash.now[:notice] = "Tienes #{@doctors.count}" + " especialista".pluralize(@doctors.count)
   end
 
