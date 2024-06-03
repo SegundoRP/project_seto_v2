@@ -55,6 +55,7 @@ gem 'bootstrap', '~> 5.2.3'
 # gem 'view_component'
 gem 'cloudinary'
 gem 'inline_svg'
+gem "view_component"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -63,6 +64,7 @@ group :development, :test do
   # gem "letter_opener_web"
   gem "rspec-rails"
   gem "factory_bot", "~> 6.4"
+  gem 'faker'
 end
 
 group :development do
@@ -86,6 +88,9 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+  gem "shoulda-matchers", require: false
+  gem 'database_cleaner-active_record'
+  # gem 'database_cleaner-redis'
 end
 
 gem "tailwindcss-rails", "~> 2.4"
