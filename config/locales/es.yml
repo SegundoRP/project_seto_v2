@@ -11,6 +11,16 @@ es:
       success: Perfil actualizado exitosamente
     destroy:
       success: Perfil eliminado exitosamente
+  patients:
+    title: Pacientes
+    new: Crea un nuevo perfil de paciente
+    edit: Editar información del paciente
+    create:
+      success: Paciente creado exitosamente
+    update:
+      success: Paciente actualizado exitosamente
+    destroy:
+      success: Paciente eliminado exitosamente
   helpers:
     submit:
       create: Crear %{model}
