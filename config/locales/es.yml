@@ -21,6 +21,20 @@ es:
       success: Paciente actualizado exitosamente
     destroy:
       success: Paciente eliminado exitosamente
+      failure:
+  consultations:
+    title: Consultas
+    new: Crea una nueva consulta
+    edit: Editar la consulta
+    create:
+      success: Consulta creada exitosamente
+      failure: La consulta no se pudo crear
+    update:
+      success: Consulta actualizada exitosamente
+      failure: La consulta no se pudo actualizar
+    destroy:
+      success: Consulta eliminada exitosamente
+      failure: La consulta no se pudo eliminar
   helpers:
     submit:
       create: Crear %{model}
