@@ -37,7 +37,7 @@ class DoctorsController < ApplicationController
     if @doctor.destroy
       redirect_to doctor_path(@doctor), notice: t('.success')
     else
-      render :show, status: :unprocessable_entity, alert: t(".failure")
+      render :show, status: :see_other, alert: t(".failure")
     end
   end
 
