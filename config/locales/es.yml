@@ -7,6 +7,7 @@ es:
     edit: Editar información del psicólogo
     create:
       success: Perfil creado exitosamente
+      failure: El perfil no se pudo crear
     update:
       success: Perfil actualizado exitosamente
     destroy:
