@@ -15,11 +15,10 @@ class DoctorsController < ApplicationController
 
   def create
     @doctor = Doctor.new(doctor_params)
-
     if @doctor.save
       redirect_to doctor_path(@doctor), notice: t('.success')
     else
-      render :new, status: :unprocessable_entity, alert: t(".failure")
+      render :new, status: :unprocessable_entity, alert: flash[:alert] = t(".failure")
     end
   end
 
@@ -29,7 +28,7 @@ class DoctorsController < ApplicationController
     if @doctor.update(doctor_params)
       redirect_to doctor_path(@doctor), notice: t('.success')
     else
-      render :edit, status: :unprocessable_entity, alert: t(".failure")
+      render :edit, status: :unprocessable_entity, alert: flash[:alert] = t(".failure")
     end
   end
 
@@ -37,7 +36,7 @@ class DoctorsController < ApplicationController
     if @doctor.destroy
       redirect_to doctor_path(@doctor), notice: t('.success')
     else
-      render :show, status: :see_other, alert: t(".failure")
+      render :show, status: :see_other, alert: flash[:alert] = t(".failure")
     end
   end
 
