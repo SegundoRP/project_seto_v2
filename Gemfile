@@ -65,6 +65,8 @@ group :development, :test do
   gem "rspec-rails"
   gem "factory_bot", "~> 6.4"
   gem 'faker'
+  gem 'spring'
+  gem 'spring-commands-rspec'
 end
 
 group :development do
