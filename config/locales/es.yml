@@ -10,6 +10,7 @@ es:
       failure: El perfil no se pudo crear
     update:
       success: Perfil actualizado exitosamente
+      failure: El perfil no se pudo actualizar
     destroy:
       success: Perfil eliminado exitosamente
   patients:
@@ -18,11 +19,12 @@ es:
     edit: Editar información del paciente
     create:
       success: Paciente creado exitosamente
+      failure: El paciente no se pudo crear
     update:
       success: Paciente actualizado exitosamente
+      failure: El paciente no se pudo actualizar
     destroy:
       success: Paciente eliminado exitosamente
-      failure:
   consultations:
     title: Consultas
     new: Crea una nueva consulta
@@ -35,7 +37,6 @@ es:
       failure: La consulta no se pudo actualizar
     destroy:
       success: Consulta eliminada exitosamente
-      failure: La consulta no se pudo eliminar
   helpers:
     submit:
       create: Crear %{model}
