@@ -20,7 +20,7 @@ class ConsultationsController < ApplicationController
     if @consultation.save
       redirect_to consultation_path(@consultation), notice: t('.success')
     else
-      render :new, status: :unprocessable_entity, alert: t('.failure')
+      render :new, status: :unprocessable_entity, alert: flash[:alert] = t('.failure')
     end
   end
 
@@ -30,16 +30,13 @@ class ConsultationsController < ApplicationController
     if @consultation.update(consultation_params)
       redirect_to consultation_path(@consultation), notice: t('.success')
     else
-      render :edit, status: :unprocessable_entity, alert: t('.failure')
+      render :edit, status: :unprocessable_entity, alert: flash[:alert] = t('.failure')
     end
   end
 
   def destroy
-    if @consultation.destroy
-      redirect_to consultations_path, notice: t('.success')
-    else
-      render :show, status: :see_other, alert: t('.failure')
-    end
+    @consultation.destroy
+    redirect_to consultations_path, status: :see_other, notice: t('.success')
   end
 
   private
