@@ -33,11 +33,8 @@ class DoctorsController < ApplicationController
   end
 
   def destroy
-    if @doctor.destroy
-      redirect_to doctor_path(@doctor), notice: t('.success')
-    else
-      render :show, status: :see_other, alert: flash[:alert] = t(".failure")
-    end
+    @doctor.destroy
+    redirect_to doctors_path, status: :see_other, notice: t('.success')
   end
 
   private

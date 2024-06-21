@@ -19,7 +19,7 @@ class PatientsController < ApplicationController
     if @patient.save
       redirect_to patient_path(@patient), notice: t('.success')
     else
-      render :new, status: :unprocessable_entity, alert: t('.failure')
+      render :new, status: :unprocessable_entity, alert: flash[:alert] = t('.failure')
     end
   end
 
@@ -29,16 +29,13 @@ class PatientsController < ApplicationController
     if @patient.update(patient_params)
       redirect_to patient_path(@patient), notice: t('.success')
     else
-      render :edit, status: :unprocessable_entity, alert: t('.failure')
+      render :edit, status: :unprocessable_entity, alert: flash[:alert] = t('.failure')
     end
   end
 
   def destroy
-    if @patient.destroy
-      redirect_to patients_path, notice: t('.success')
-    else
-      render @patient.errors, status: :see_other, alert: t('.failure')
-    end
+    @patient.destroy
+    redirect_to patients_path, status: :see_other, notice: t('.success')
   end
 
   private
